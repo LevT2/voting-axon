@@ -12,7 +12,3 @@ data class ChangeVoteCommand(
         @TargetAggregateIdentifier val voteId: UUID,
         val menuId: Int
 )
-
-data class CloseVoteCommand(
-        @TargetAggregateIdentifier val voteId: UUID
-)
