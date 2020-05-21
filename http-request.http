@@ -1,0 +1,25 @@
+###
+
+GET http://localhost:8080/api/v1/{{voteId}}
+Accept: application/json
+
+###
+
+POST http://localhost:8080/api/v1/{{voteId}}/change/1488
+
+###
+
+GET http://localhost:8080/api/v1/{{voteId}}
+Accept: application/json
+
+###
+
+POST http://localhost:8080/api/v1/
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+    client.global.set("voteId", response.body);
+%}
+
