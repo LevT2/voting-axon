@@ -102,6 +102,10 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <artifactId>kotlin-maven-plugin</artifactId>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <version>${kotlin.version}</version>
@@ -119,12 +123,11 @@
                         <artifactId>kotlin-maven-noarg</artifactId>
                         <version>${kotlin.version}</version>
                     </dependency>
-<!--        Not needed for this project at this point                -->
-<!--                    <dependency>-->
-<!--                        <groupId>org.jetbrains.kotlin</groupId>-->
-<!--                        <artifactId>kotlin-maven-allopen</artifactId>-->
-<!--                        <version>${kotlin.version}</version>-->
-<!--                    </dependency>-->
+                    <dependency>
+                        <groupId>org.jetbrains.kotlin</groupId>
+                        <artifactId>kotlin-maven-allopen</artifactId>
+                        <version>${kotlin.version}</version>
+                    </dependency>
                 </dependencies>
             </plugin>
         </plugins>
