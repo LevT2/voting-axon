@@ -1,5 +1,4 @@
 
-
 #  https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 spring:
   jpa:
@@ -30,16 +29,3 @@ spring:
     password:
   h2.console.enabled: true
 
-  data.rest:
-    #  https://docs.spring.io/spring-data/rest/docs/current/reference/html/#getting-started.basic-settings
-    basePath: /api/v1
-    returnBodyOnCreate: true
-
-#server:
-#  port: 8088
-
-#logging:
-#  level:
-#    org:
-#      apache:
-#        catalina : DEBUG
