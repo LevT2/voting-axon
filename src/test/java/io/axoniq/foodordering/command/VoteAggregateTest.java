@@ -14,9 +14,9 @@ class VoteAggregateTest {
 
     private FixtureConfiguration<VoteAggregate> fixture;
 
-    private static UUID uuid = UUID.randomUUID();
+    private static final UUID uuid = UUID.randomUUID();
 
-    private static int newMenuId = 5;
+    private static final int newMenuId = 5;
 
     @BeforeEach
     void setUp() {

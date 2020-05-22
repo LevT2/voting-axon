@@ -22,7 +22,6 @@ public class VoteAggregate {
 
     private static final Logger logger = LoggerFactory.getLogger(VoteAggregate.class);
 
-    @Autowired
     private AcceptVoteService acceptVoteService;
 
     @AggregateIdentifier
@@ -37,6 +36,11 @@ public class VoteAggregate {
     public VoteAggregate(CreateVoteCommand command) {
         AggregateLifecycle.apply(new VoteCreatedEvent(command.getVoteId()));
         AggregateLifecycle.apply(new VoteCastEvent(command.getVoteId(),0));
+    }
+
+    @Autowired
+    public VoteAggregate(AcceptVoteService acceptVoteService) {
+        this.acceptVoteService = acceptVoteService;
     }
 
     @CommandHandler
